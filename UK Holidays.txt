@@ -1,0 +1,1 @@
+Accomodation Type, Destination, Price Per Night, Number of People, Start Date, End Date, Price, Number of Nights

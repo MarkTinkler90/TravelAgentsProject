@@ -10,13 +10,14 @@ import java.util.logging.Logger;
 
 public class TravelAgents {
     
-
-    public static void main(String[] args) {
-        createFile();
-        Select selectObj = new Select();
-        selectObj.
-
+    public static void main(String[] args) {        
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Select().setVisible(true);
+            }
+        });
         
+        createFile();
     }
 
     public static void createFile() {
