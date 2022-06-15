@@ -14,7 +14,7 @@ public class TravelAgents {
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Select().setVisible(true);
+                new MainFrame().setVisible(true);
             }
         });
         
