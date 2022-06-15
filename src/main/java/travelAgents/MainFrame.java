@@ -14,12 +14,12 @@ import javax.swing.JMenuItem;
  */
 public class MainFrame extends javax.swing.JFrame {
 
-    JMenu subMenu = new JMenu("New holiday");
-    JMenuItem miNewHoliday = new JMenuItem("New Holiday");
-    JMenuItem miCruise = new JMenuItem("New Cruise");
-    JMenuItem miUK = new JMenuItem("New UK holiday");
-    JMenuItem miAbroad = new JMenuItem("New Aboard holiday");
-    JMenuItem miExit = new JMenuItem("Exit");
+    private JMenu subMenu = new JMenu("New holiday");
+    private JMenuItem miNewHoliday = new JMenuItem("New Holiday");
+    private JMenuItem miCruise = new JMenuItem("Cruise");
+    private JMenuItem miUK = new JMenuItem("UK holiday");
+    private JMenuItem miAbroad = new JMenuItem("Aboard holiday");
+    private JMenuItem miExit = new JMenuItem("Exit");
 
     /**
      * Creates new form main
@@ -31,17 +31,17 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void eventListenerInitilisation() {
         miCruise.addActionListener(e -> {
-            System.out.println("exit pressed");
+            System.out.println("Cruise clicked");
         });
         
         miUK.addActionListener(e -> {
-            
+            System.out.println("UK clicked");
         });
         
         miAbroad.addActionListener(e -> {
-            
-        })
-
+            System.out.println("Abroad clicked");
+        });
+        
         miExit.addActionListener(e -> {
             System.out.println("exit pressed");
             System.exit(0);
@@ -102,29 +102,7 @@ public class MainFrame extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
+
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
