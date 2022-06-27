@@ -17,9 +17,9 @@ public class UKBased extends Booking {
         accom = "";
     }
     
-    UKBased(String ac, String dest, int pn, int np, int p, String sd, String ed, int night)
+    UKBased(String ac, int ID, String dest, int pn, int np, int p, String sd, String ed, int night)
     {
-        super(dest, pn, np, p, sd, ed, night);
+        super(ID, dest, pn, np, p, sd, ed, night);
         accom = ac;
         
         FileWriter fw = null;

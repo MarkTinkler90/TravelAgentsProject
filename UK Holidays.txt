@@ -1,1 +1,1 @@
-Accomodation Type, Destination, Price Per Night, Number of People, Start Date, End Date, Price, Number of Nights
+Hotel, Newcastle, 40, 4, 1120, 01/02/23, 08/02/23, 7

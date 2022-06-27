@@ -21,9 +21,9 @@ public class Abroad extends Booking {
         fNum = 0;
     }
     
-    Abroad(String da, String ra, int fn, String dest, int pn, int np, int p, String sd, String ed, int night)
+    Abroad(String da, String ra, int fn, int ID, String dest, int pn, int np, int p, String sd, String ed, int night)
     {
-       super(dest, pn, np, p, sd, ed, night);
+       super(ID, dest, pn, np, p, sd, ed, night);
        depAir = da;
        retAir = ra;
        fNum = fn;

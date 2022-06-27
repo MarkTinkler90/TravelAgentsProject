@@ -27,18 +27,6 @@ public class TravelAgents {
                 System.out.println("File created: " + cruiseFile.getName());
                 FileWriter fw = null;
                 PrintWriter pw = null;
-                try {
-                    fw = new FileWriter("Cruises.txt", true);
-                    pw = new PrintWriter(fw);
-                    pw.write("Cabin Type, Departure port, Return Port, "
-                            + "Destination, Price Per Night, Number of People, "
-                            + "Start Date, End Date, Price, Number of Nights");
-                    pw.println();
-                    pw.close();
-                    fw.close();
-                } catch (IOException ex) {
-                    Logger.getLogger(Cruise.class.getName()).log(Level.SEVERE, null, ex);
-                }
             }
         } catch (IOException e) {
             System.out.println("An error occurred.");
@@ -50,18 +38,6 @@ public class TravelAgents {
                 System.out.println("File created: " + UKFile.getName());
                 FileWriter fw = null;
                 PrintWriter pw = null;
-                try {
-                    fw = new FileWriter("UK Holidays.txt", true);
-                    pw = new PrintWriter(fw);
-                    pw.write("Accomodation Type, Destination, Price Per Night, "
-                            + "Number of People, Start Date, End Date, Price, "
-                            + "Number of Nights");
-                    pw.println();
-                    pw.close();
-                    fw.close();
-                } catch (IOException ex) {
-                    Logger.getLogger(Cruise.class.getName()).log(Level.SEVERE, null, ex);
-                }
             }
         } catch (IOException e) {
             System.out.println("An error occurred.");
@@ -73,25 +49,12 @@ public class TravelAgents {
                 System.out.println("File created: " + abroadFile.getName());
                 FileWriter fw = null;
                 PrintWriter pw = null;
-                try {
-                    fw = new FileWriter("Abroad.txt", true);
-                    pw = new PrintWriter(fw);
-                    pw.write("Departure Airport, Return Airport, Flight Number, "
-                            + "Destination, Price Per Night, Number of People, "
-                            + "Start Date, End Date, Price, Number of Nights");
-                    pw.println();
-                    pw.close();
-                    fw.close();
-                } catch (IOException ex) {
-                    Logger.getLogger(Cruise.class.getName()).log(Level.SEVERE, null, ex);
-                }
             }
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
         //menu();
-        System.out.println("File created");
     }
 
     public static void menu() {
@@ -141,6 +104,7 @@ public class TravelAgents {
         int night = crus.nextInt();
         z = crus.nextLine();
         int p = pn * np * night;
+        int ID = 1;
         System.out.println("Cabin Type: " + c
                 + "\nDeparture Port: " + dp
                 + "\nReturn Port: " + rp
@@ -154,7 +118,7 @@ public class TravelAgents {
         System.out.println("Save this data?(Y/N)");
         String ans = crus.nextLine().toLowerCase();
         if ("y".equals(ans)) {
-            Cruise cruise = new Cruise(c, dp, rp, dest, pn, np, p, sd, ed, night);
+            Cruise cruise = new Cruise(c, dp, rp, ID, dest, pn, np, p, sd, ed, night);
         }
         menu();
     }
@@ -178,6 +142,7 @@ public class TravelAgents {
         int night = uk.nextInt();
         z = uk.nextLine();
         int p = pn * np * night;
+        int ID = 1;
         System.out.println("Accomodation: " + ac
                 + "\nDestination: " + dest
                 + "\nPrice Per Night: £" + pn
@@ -189,7 +154,7 @@ public class TravelAgents {
         System.out.println("Save this data?(Y/N)");
         String ans = uk.nextLine().toLowerCase();
         if ("y".equals(ans)) {
-            UKBased ukb = new UKBased(ac, dest, pn, np, p, sd, ed, night);
+            UKBased ukb = new UKBased(ac, ID, dest, pn, np, p, sd, ed, night);
         }
         menu();
 
@@ -219,6 +184,7 @@ public class TravelAgents {
         int night = abr.nextInt();
         int p = pn * np * night;
         z = abr.nextLine();
+        int ID = 1;
         System.out.println("Departure Airport: " + da
                 + "\nReturn Airport: " + ra
                 + "\nFlight Number: " + fn
@@ -232,7 +198,7 @@ public class TravelAgents {
         System.out.println("Save this data?(Y/N)");
         String ans = abr.nextLine().toLowerCase();
         if ("y".equals(ans)) {
-            Abroad abroad = new Abroad(da, ra, fn, dest, pn, np, p, sd, ed, night);
+            Abroad abroad = new Abroad(da, ra, fn, ID, dest, pn, np, p, sd, ed, night);
         }
         menu();
     }

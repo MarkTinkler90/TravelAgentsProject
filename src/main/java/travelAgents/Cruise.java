@@ -21,9 +21,9 @@ public class Cruise extends Booking{
     retPort = "";
   }
   //(cabin, depPort, retPort, ppn, numPeople, price, startDate, endDate, numNights )
-  Cruise(String c, String dp, String rp, String dest, int pn, int np, int p, String sd, String ed, int night)
+  Cruise(String c, String dp, String rp, int ID, String dest, int pn, int np, int p, String sd, String ed, int night)
   {
-    super(dest, pn, np, p, sd, ed, night);
+    super(ID, dest, pn, np, p, sd, ed, night);
     cabin = c;
     depPort = dp;
     retPort = rp;

@@ -3,6 +3,7 @@ package travelAgents;
 
 public class Booking{
   
+  int bookingID;
   String destination;
   int ppn; //price per person per night
   int numPeople;
@@ -13,6 +14,7 @@ public class Booking{
 
   Booking()
   {
+    bookingID = 0;
     destination = "";
     ppn = 0;
     numPeople = 0;
@@ -22,8 +24,9 @@ public class Booking{
     numNights = 0;
   }
   //(ppn, numPeople, price, startDate, endDate, numNights )
-  Booking(String dest, int pn, int np, int p, String sd, String ed, int night)
+  Booking(int ID, String dest, int pn, int np, int p, String sd, String ed, int night)
   {
+    bookingID = ID;
     destination = dest;
     ppn = pn;
     numPeople = np;
